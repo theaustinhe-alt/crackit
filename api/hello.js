@@ -1,7 +1,3 @@
-export const config = {
-  runtime: "edge"
-};
-
-export default function handler(req) {
-  return new Response("Hello from Edge!", { status: 200 });
+export default function handler(req, res) {
+  res.status(200).json({ message: "Hello from Node.js Serverless!" });
 }
